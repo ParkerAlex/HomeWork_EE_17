@@ -5,9 +5,12 @@ import java.util.List;
 
 public class DaoUserImpl implements Dao{
 
+	public static PreparedStatement preparedStatement;
+	public static Connection connection;
+	
 	@Override
 	public User create(User user) {
-		PreparedStatement stmt = conn.prepareStatement("INSERT INTO users (login, password) VALUES (?,?)");
+		PreparedStatement stmt = connection.prepareStatement("INSERT INTO users (login, password) VALUES (?,?)");
 
         stmt.setString(1, "Bob");
         stmt.setString(2, "0000");
