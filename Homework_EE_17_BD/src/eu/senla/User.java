@@ -2,10 +2,10 @@ package eu.senla;
 
 public class User {
 	
-	String login;
-	String password;
+	private String login;
+	private String password;
 	
-	public User(String login, String password) {
+	public User() {
 		this.login = login;
 		this.password = password;
 	}
@@ -24,6 +24,11 @@ public class User {
 	
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [login=" + login + ", password=" + password + "]";
 	}
 
 

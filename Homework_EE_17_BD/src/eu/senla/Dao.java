@@ -4,10 +4,10 @@ import java.util.List;
 
 public interface Dao {
 	
-	User create (User user);
-	User read (String name, String pass);
-	User update (String name, User newUser);
-	boolean delete (String name, String pass);
+	void create (User user);
+	User read (String login);
+	void update (String login, User newUser);
+	void delete (String login, String pass);
 	List<User> readAll();
 
 }
